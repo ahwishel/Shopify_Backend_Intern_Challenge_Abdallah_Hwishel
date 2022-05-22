@@ -1,0 +1,38 @@
+.itemCard{
+    width: 30em;
+    text-align: center;
+    margin: 1em;
+    height: 177px;
+    max-height: 35em;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in;
+}
+
+.itemCard:hover{
+    background-color: #3e446b;
+}
+
+@media (max-width: 450px) {
+    .itemCard{
+        width: 20em;
+    }
+}
+
+.addIcon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.infoDiv{
+    text-align: left;
+}
+
+
+.description_fieldset{
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
