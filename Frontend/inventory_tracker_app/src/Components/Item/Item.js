@@ -110,7 +110,7 @@ export default function Item({ itemInfo, checkedItems, setCheckedItems }) {
     };
 
     axios
-      .put(`${window.location.href}/update_item`, data, {
+      .put(`${window.location.href}update_item`, data, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },

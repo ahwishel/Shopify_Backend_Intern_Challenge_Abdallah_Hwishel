@@ -48,7 +48,7 @@ export default function Tracker() {
 
   useEffect(() => {
     axios
-      .get(`${window.location.href}/get_warehouses`)
+      .get(`${window.location.href}get_warehouses`)
       .then(({ data }) => {
         if (data.length > 0) {
           setWarehouses(data);
@@ -63,7 +63,7 @@ export default function Tracker() {
     if (currWarehouse) {
       axios
         .get(
-          `${window.location.href}/get_inventory/${currWarehouse
+          `${window.location.href}get_inventory/${currWarehouse
             .split(" ")
             .join("_")}`
         )
@@ -101,15 +101,12 @@ export default function Tracker() {
     //For each item that's selected, make a delete request
     const deleteRequests = [];
     for (let item of checkedItems) {
-      const deleteRequest = axios.delete(
-        `${window.location.href}/delete_item`,
-        {
-          data: item,
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
+      const deleteRequest = axios.delete(`${window.location.href}delete_item`, {
+        data: item,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
       deleteRequests.push(deleteRequest);
     }
     //Use Promise.all so that I'm changing the state only once instead of once for every checked item
@@ -125,7 +122,7 @@ export default function Tracker() {
     const reassignRequests = [];
     for (let item of checkedItems) {
       const reassignRequest = axios.put(
-        `${window.location.href}/update_item`,
+        `${window.location.href}update_item`,
         { ...item, new_address: warehouseToReassign },
         {
           headers: {
@@ -261,7 +258,7 @@ export default function Tracker() {
               //Create warehouse
               axios
                 .put(
-                  `${window.location.href}/create_warehouse`,
+                  `${window.location.href}create_warehouse`,
                   {
                     name: newWarehouseName,
                     address: newWarehouseAddress,

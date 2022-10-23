@@ -149,7 +149,7 @@ export default function NewItem({
               //Create iteam
               axios
                 .put(
-                  `${window.location.href}/create_item`,
+                  `${window.location.href}create_item`,
                   {
                     name: name,
                     address: currWarehouse,
