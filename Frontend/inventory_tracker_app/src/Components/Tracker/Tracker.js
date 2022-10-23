@@ -55,7 +55,7 @@ export default function Tracker() {
           setCurrWarehouse(data[0].address);
         }
       })
-      .catch((err) => console.err(err));
+      .catch((err) => console.error(err));
   }, [createdWarehouse]);
 
   useEffect(() => {
