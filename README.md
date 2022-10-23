@@ -3,7 +3,9 @@ This is an inventory tracking web app that allows users to perform basic CRUD op
 
 <b>No need to install anything, just visit the application link to use it :)</b>
 
-Application Link: <a href="https://shopify-backend-challenge-f22.codevat.repl.co/">Inventory Tracking App</a>
+<h2>NOTE: Since this uses the free tier in heroku for hosting, clicking the link to visit the app below may not work immediately and can take a few refreshes to get it to actually show the webpage. It takes a hot second for the heroku server hosting my app to wake up 🤷‍♂️</h2>
+
+Application Link: <a href="https://shopify-inventory-tracker-ah.herokuapp.com/">Inventory Tracking App</a>
 
 Replit Link: <a href="https://replit.com/@CodeVat/Shopify-Backend-Challenge-F22?v=1">Link</a>
 <hr>
