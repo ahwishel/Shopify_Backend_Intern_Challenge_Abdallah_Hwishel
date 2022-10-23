@@ -2,7 +2,7 @@
   "name": "inventory_tracker",
   "version": "1.0.0",
   "description": "This is an inventory tracking web app that allows users to perform basic CRUD operations on any inventory items they want.",
-  "main": "index.js",
+  "main": "./Server/server.js",
   "scripts": {
     "start": "nodemon ./Server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
